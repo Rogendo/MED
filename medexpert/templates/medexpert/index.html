@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<h1>NEWS UPDATE</h1>
+
+{% load static %}
+<!--<body  id="bg" style="background-image:linear-gradient(rgba(250,201,192,0.9),rgba(121,53,201,0.5)), url({% static 'medexpert/images/mat4.jpg' %});">-->
+
+<div class="world">
+ <section id="doctor-team" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="ser-title">MEDICAL WORLD!!</h2>
+          <hr class="botm-line">
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6">
+          <div class="thumbnail">
+                        <img src="{% static 'medexpert/img/map2.jfif' %}" alt="..." class="team-img">
+
+            <div class="caption">
+              <h3>TROPICAL DISEASES</h3>
+              <p>tropical diseases in the world</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6">
+          <div class="thumbnail">
+                        <img src="{% static 'medexpert/img/map3.jfif' %}" alt="..." class="team-img">
+
+            <div class="caption">
+              <h3>Major diseases in the world</h3>
+              <p>HIV/AIDS and TUBERCULOSIS</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6">
+          <div class="thumbnail">
+                        <img src="{% static 'medexpert/img/map4.jfif' %}" alt="..." class="team-img">
+
+            <div class="caption">
+              <h3>HEALTH IN PRISONS</h3>
+              <p>female population held in prisons</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6">
+          <div class="thumbnail">
+            <img src="{% static 'medexpert/img/map5.jfif' %}" alt="..." class="team-img">
+            <div class="caption">
+              <h3>KIDNEY DISEASES</h3>
+              <p>Deaths caused by kidney infections per 1000 people</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<p  style="color:tomato">Top news</p>
+  <section id="cta-1" class="section-padding">
+    <div class="container">
+
+        <div class="schedule-tab">
+          <div class="col-md-6 col-sm-8 bor-left">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>International</h3>
+        {% for updates in latest_updates %}
+                              {{ updates.update_text }}
+        </p>
+    </div>
+    <div class="col-sm-6">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+              <a href="#" class="medi-info-btn">READ MORE</a>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+  </section>
+<!--<video autoplay loop muted playsinline src="images/banner.mp4"></video>-->
+{{ updates.image }}
+                         <img src ='{{ image.url }}'>
+            <video controls width="800"; autoplay loop muted playsinline>
+                <source src="{% static 'media/media/med1.mp4' %}" type="video/mp4">
+            </video>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block body %}
+
+
+</head>
+
+    <div class="col-md-2">
+        <a href="{% url 'medexpert:register' %}">
+            SignUp</a>
+    </div>
+<form method="post">
+{% csrf_token %}
+    <div class="col-md-8">
+        <div class="form-group">
+            <div class="form-group">
+                <label for="username">Username
+                </label>
+                <input type="text" name="username" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" required />
+            </div>
+            <label class="text-danger" style="position: center">{{ msg }}</label>
+            <br />
+            <div class="form-group">
+                <button class="btn btn-primary form-control"><span class="glyphicon-log-in"></span>Login </button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

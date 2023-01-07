@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>CLINICS</title>
+</head>
+<body>
+
+<div class='w3-card-2 topnav' id='topnav'>
+  <div style="overflow:auto;">
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<ul><h3>
+
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
+      <a href='../default.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
+
+    <a class="w3-bar-item w3-button" href='' title='Medexpert'>NEARBY CLINICS </a>
+
+    <a class="w3-bar-item w3-button" href='' title='Medexpert'>MAPS</a>
+</h3></ul>
+</nav></div> </div>
+
+
+{% for clinics in clinics_nearby %}
+
+
+{{clinics.hospital_name}}
+{{clinics.phone}}
+{{clinics.email}}
+{{clinics.services}}
+{{clinics.description}}
+{{clinics.city}}
+{{clinics.website}}
+{{clinics.image}}
+<img src ='{{ clinics.image.url }}'>
+
+{{clinics.hometown }}
+
+</body>
+{% endfor %}
+{% endblock %}
+

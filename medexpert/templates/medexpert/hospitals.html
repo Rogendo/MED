@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}HOSPITALS{% endblock %}
+
+{% block body %}
+
+
+<h1>HOSPITALS</h1>
+<i class="fa fa-hospital-o"style="color:orange"></i>
+<i class="fa fa-hospital-o" style="font-size:24px;color:blue"></i>
+<i class="fa fa-hospital-o" style="font-size:36px;color:greenyellow"></i>
+<i class="fa fa-hospital-o" style="font-size:48px;color:red"></i>
+<br><br><br><br>
+{% for hospital in  nearby_hospitals %}
+{% load static %}
+
+        </div>
+
+<!--<i class="fa fa-hospital-o"></i>-->
+<!--<i class="fa fa-hospital-o" style="font-size:24px"></i>-->
+<!--<i class="fa fa-hospital-o" style="font-size:36px;"></i>-->
+<i class="fa fa-hospital-o" style="font-size:48px;color:red"></i>
+<br>
+
+<p>
+<div class="hospitals">
+    <ul>
+        <li><b>NAME</b> {{hospital.hospital_name}}</li><br>
+        <li><b>PHONE</b> {{hospital.phone}}</li><br>
+        <li><b>E-MAIL ADDRESS</b> {{hospital.email}}</li><br>
+    </ul>
+</div>
+</p>
+    <ul>
+        <li><b>BRIEF DESCRIPTION</b> {{hospital.description}}</li><br>
+        <li><b>LOACATION</b> {{hospital.city}}</li><br>
+        <li><b>WEBSITE</b> {{hospital.website}}</li><br>
+        <li><b>PROFILE</b> {{hospital.image}}</li><br>
+        <!--<img src ='{{ clinics.image.url }}'>-->
+        <li><b>HOME-TOWN</b>{{hospital.hometown }}</li>
+    </ul>
+
+
+
+</body>
+{% endfor %}
+{% endblock %}
+

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency</title>
+</head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+
+            <img src="{% static 'medexpert/images/med17.jpg' %}" style="width:100%">
+    </div>
+    <div class="col-sm-6">
+       <img  src="{% static 'medexpert/images/med15.jpg' %}" style="width:100%">
+    </div>
+
+<body>
+
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-sm-12">
+      <h3>Report An Emergency Occurence</h3>
+      <form method="post">
+
+    {% csrf_token %}
+    <br>
+    {{ form.as_p }}
+
+
+    <button type="submit">submit</button>
+<button><a href="{% url 'medexpert:updateview' %}">Go Back</a></button>
+
+</form>
+    </div>
+
+  </div>
+</div>
+</body>
+  </div>
+</div>
+{% endblock %}

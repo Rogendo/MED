@@ -1,0 +1,98 @@
+
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="{% static 'medexpert/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'medexpert/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'medexpert/css/style.css' %}">
+  <script src="{% static 'medexpert/js/jquery.js' %}"></script>
+  <script src="{% static 'medexpert/js/bootstrap.min.js' %}"></script>
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+
+ <a class="navbar-brand" href="#"><img src="{% static 'medexpert/img/logo.png' %}" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar"></div><li style="color:red;">
+              <ul class="nav navbar-nav">
+
+
+
+
+                <li><a href="{% url 'medexpert:home' %}"><i class="fa fa-home" style="font-size:48px;color:black"></i>HOME</a> </li>
+                  <li><a href="{% url 'medexpert:updateview' %}"><i class="fa fa-newspaper-o" style="font-size:48px;color:wheat"></i> NEWSUPDATE</a></li>
+                  <li><a href="{% url 'medexpert:submit' %}"><i class="fa fa-ambulance" style="font-size:48px;color:red"></i>EMERGENCY</a> </li>
+
+                <li><a href="{% url 'medexpert:view_hospital' %}"><i class="fa fa-hospital-o" style="font-size:48px;color:red"></i>
+HOSPITALS</a> </li>
+
+                  <li><a href="{% url 'medexpert:view_maps' %}"><i class="fa fa-map-o" style="font-size:48px;color:green"></i>
+
+MAP</a></li>
+                <li><a href="{% url 'medexpert:view_firstaid' %}"><i class="fa fa-medkit" style="font-size:48px;color:red"></i>FIRST-AID</a> </li>
+
+<style>
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #a0f9e8;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(107, 146, 252, 0.75);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+<li>
+<div class="dropdown">
+
+    <i class="fa fa-bars" style="font-size:48px;color:black"></i>
+  <div class="dropdown-content">
+      <a href="{% url 'medexpert:send' %}"><i class="fa fa-bookmark"></i>APPOINTMENT</a><br><br>
+          <a href="#"><i class="fa fa-bell"></i>NOTIFICATION</a><br><br>
+                <a href="#"><i class="fa fa-question-circle"></i>HELP</a>
+
+
+  </div>
+</div>
+              </ul></li><br><br><br><br><br><br>
+
+    <title>message</title>
+</head>
+
+<body>
+<h4><b><i>BOOK AN APPOINTMENT or MAKE ENQUIRES</i></b></h4>
+
+
+<br><br><br><br><br><form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">submit</button>
+    <button><a href="{% url 'medexpert:home' %}">Go Back</a></button>
+
+</form>
+<br><br><br><br><br><br>
+
+
+
+</body>
+{% include 'medexpert/footer.html' %}
+</html>
+

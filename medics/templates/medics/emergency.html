@@ -1,0 +1,47 @@
+
+{% include 'base3.html' %}
+
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>EMERGENCIES</h1>
+
+<table id="messages" border="1">
+    <thead>
+        <th scope="col"><h3 style="color: green">NAME</h3></th>
+        <th scope="col"><h3 style="color: black">PHONE</h3></th>
+        <th scope="col"> <h3 style="color: red">EMAIL</h3></th>
+        <th scope="col"><h3 style="color: black">TYPE OF EMERGENCY</h3></th>
+        <th scope="col"><h3 style="color: orange">EXACT LOCATION</h3></th>
+        <th scope="col"><h3 style="color: purple">TIME SUBMITTED</h3></th>
+    </thead>
+
+    <tbody>
+
+        {% for user in users %}
+        <tr>
+        <td> {{ user.name }} </td>
+        <td> {{ user.email }} </td>
+        <td>  {{ user.Type_Of_Emergency }}</td>
+        <td>  {{ user.Exact_Location }}</td>
+        <td> {{ user.Employee_id }}</td>
+        <td> {{ user.Time_submitted }}</td>
+
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+
+</body>
+</html>

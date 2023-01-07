@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<body>
+
+<div class='w3-card-2 topnav' id='topnav'>
+  <div style="overflow:auto;">
+  </div>
+</div>
+</div>
+</body>
+<p style="background-color:powderblue;"/>
+<h1>FIRST AID</h1>
+{% for firstaid in  firstaid_operations %}
+				<video autoplay loop muted playsinline src="{% static 'medexpert/img/firstaid.mp4' %}" width="1000" height="500"></video>
+
+{{firstaid.description}}
+{{firstaid.image}}
+<img src ='{{ hospitals.image.url }}'>
+
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-2 col-sm-2 col-xs-6">
+          <div class="thumbnail">
+
+            <div class="caption">
+
+<iframe width="220" height="115"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-6">
+          <div class="thumbnail">
+
+            <div class="caption">
+
+<iframe width="220" height="115"
+src="https://www.youtube.com/watch?v=Ef5wRT11dNI">
+</iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+
+<div class="main">
+<section id="doctor-team" class="section-padding">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-2 col-sm-2 col-xs-4">
+          <div class="thumbnail">
+
+            <div class="caption">
+              <h3>TROPICAL DISEASES</h3>
+              <p>tropical diseases in the world</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-4">
+          <div class="thumbnail">
+
+            <div class="caption">
+              <h3>TROPICAL DISEASES</h3>
+              <p>tropical diseases in the world</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-4">
+          <div class="thumbnail">
+
+            <div class="caption">
+              <h3>TROPICAL DISEASES</h3>
+              <p>tropical diseases in the world</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-4">
+          <div class="thumbnail">
+
+            <div class="caption">
+              <h3>TROPICAL DISEASES</h3>
+              <p>tropical diseases in the world</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-4">
+          <div class="thumbnail">
+
+            <div class="caption">
+              <h3>TROPICAL DISEASES</h3>
+              <p>tropical diseases in the world</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-4">
+          <div class="thumbnail">
+
+            <div class="caption">
+              <h3>Major diseases in the world</h3>
+              <p>HIV/AIDS and TUBERCULOSIS</p>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+
+
